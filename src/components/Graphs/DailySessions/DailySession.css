@@ -1,0 +1,24 @@
+.daily-graph p {
+    font-weight: 500;
+    padding: 20px 32px;
+}
+.daily-tooltip {
+    display: flex;
+    flex-direction: column;
+    background-color: #E60000;
+    padding: 4px 7px;
+    height: 63px;
+    width: 39px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 10px;
+    color: #fff;
+    outline: none;
+}
+.daily-tooltip:focus {
+    outline: none;
+}
+.recharts-tooltip-wrapper:has(.daily-tooltip) {
+    height: initial;
+    width: initial;
+}

@@ -1,0 +1,29 @@
+
+.responsive-wrapper-parent .label {
+    padding: 12px 15px;
+    font-weight: 500;
+}
+
+.responsive-wrapper-parent .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 90px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.responsive-wrapper-parent .percentage h1 {
+    font-size: 1rem;
+    color: #282D30;
+    text-align: center;
+}
+.responsive-wrapper-parent .percentage span {
+    font-size: 1rem;
+    color: #74798C;
+    text-align: center;
+    font-weight: 500;
+}

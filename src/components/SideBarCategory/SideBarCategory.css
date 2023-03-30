@@ -1,0 +1,10 @@
+.sidebar-category {
+    background-color: #fff;
+    height: 64px;
+    width: 64px;
+
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

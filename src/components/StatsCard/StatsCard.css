@@ -1,0 +1,21 @@
+.stats-card {
+    background-color: #FBFBFB;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 15px;
+}
+.stats-card .icon {
+    display: flex;
+}
+.stats-card p {
+    color: #282D30;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.stats-card small {
+    color: #74798C;
+}

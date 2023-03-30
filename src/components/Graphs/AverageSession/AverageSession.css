@@ -1,0 +1,43 @@
+.average-sessions-graph {
+    background-color: #FF0000;
+}
+.recharts-tooltip-wrapper {
+    height: 100%;
+    width: 100%;
+}
+.custom-tooltip_goals {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    outline: none;
+}
+.custom-tooltip_goals p {
+    position: absolute;
+    top: 15px;
+    background-color: #fff;
+    padding: 8px;
+    white-space: nowrap;
+}
+.title-label {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10% 12%;
+}
+.days-anchors {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 15px;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    color: #fff;
+    opacity: 0.5;
+}
