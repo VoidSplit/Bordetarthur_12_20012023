@@ -1,6 +1,12 @@
 import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from "./mock";
 
 
+/**
+ * get keyData of user
+ * @param {string} id 
+ * @param {boolean} isMocked 
+ * @returns {{calorieCount: number, proteinCount: number, carbohydrateCount: number, lipidCount: number}}
+ */
 export async function fetchInfos (id, isMocked) {
     if (isMocked) {
         
@@ -17,6 +23,12 @@ export async function fetchInfos (id, isMocked) {
       console.log('----- Error -----', err)
     }
 }
+/**
+ * get name and age of user
+ * @param {string} id 
+ * @param {boolean} isMocked 
+ * @returns {{firstName: string, lastName: string, age: number}}
+ */
 export async function fetchInformationUserInfo (id, isMocked) {
     if (isMocked) {
       const data = USER_MAIN_DATA.find(user => user.userId === parseInt(id))
@@ -33,6 +45,13 @@ export async function fetchInformationUserInfo (id, isMocked) {
     }
   }
 
+  
+/**
+ * get score of user
+ * @param {string} id 
+ * @param {boolean} isMocked 
+ * @returns {object}
+ */
 
   export async function fetchInformationScore (id, isMocked) {
     if (isMocked) {
@@ -52,6 +71,12 @@ export async function fetchInformationUserInfo (id, isMocked) {
     }
   }
 
+  /**
+   * get Activity of user
+   * @param {string} id 
+   * @param {boolean} isMocked 
+   * @returns {object}
+   */
   export async function fetchActivity (id, isMocked) {
     if (isMocked) {
       const data = USER_ACTIVITY.find(user => user.userId === parseInt(id))
@@ -79,7 +104,13 @@ export async function fetchInformationUserInfo (id, isMocked) {
       console.log('----- Error -----', err)
     }
   }
-  
+
+/**
+ * get sessions of user
+ * @param {string} id 
+ * @param {boolean} isMocked 
+ * @returns {*}
+ */
 export async function fetchAverageSession (id, isMocked) {
     if (isMocked) {
       const data = USER_AVERAGE_SESSIONS.find(user => user.userId === parseInt(id))
@@ -106,6 +137,12 @@ export async function fetchAverageSession (id, isMocked) {
     }
   }
   
+  /**
+   * get performances of user
+   * @param {string} id 
+   * @param {boolean} isMocked  
+   * @returns {*}
+   */
 export async function fetchPerformance (id, isMocked) {
     if (isMocked) {
       const data = USER_PERFORMANCE.find(user => user.userId === parseInt(id))
@@ -140,7 +177,11 @@ const translation = {
     speed: 'Vitesse',
     intensity: 'Intensité'
   }
-  
+  /**
+   * Format performance data
+   * @param {*} dataOriginal original data
+   * @returns {{value: number, kind: string}[]} new data
+   */
   function formatPerformanceData (dataOriginal) {
     const { data, kind } = dataOriginal
     const newData = []
@@ -152,7 +193,11 @@ const translation = {
     })
     return newData
   }
-  
+  /**
+   * Format activity data
+   * @param {*} dataOriginal original data
+   * @returns {{day: string, kilogram: number, calories: number}[]}
+   */
   function formatActivityData (dataOriginal) {
     const { sessions } = dataOriginal
     const newData = []
@@ -177,7 +222,11 @@ const translation = {
     6: 'S',
     7: 'D'
   }
-  
+  /**
+   * translate the days
+   * @param {*} dataOriginal 
+   * @returns {{day:string, sessionLength: *}[]}
+   */
   function formatSessionDays (dataOriginal) {
     const { sessions } = dataOriginal
     const newData = []
@@ -190,6 +239,11 @@ const translation = {
     return newData
   }
   
+  /**
+   * format the score
+   * @param {*} dataOriginal 
+   * @returns {{userId: string, todayScore: number, fill: string}[]}
+   */
   function formatScore (dataOriginal) {
     const { data } = dataOriginal
     let score

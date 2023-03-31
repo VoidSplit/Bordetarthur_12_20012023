@@ -6,6 +6,11 @@ import {
     ResponsiveContainer,
   } from "recharts";
 
+  /**
+   * Create a React Element with a RadialBarChart 
+   * @param {*} param0 data fetched from another function
+   * @returns React Element
+   */
 export default function Score({data}) {
     return (
         <div className="responsive-wrapper-parent">

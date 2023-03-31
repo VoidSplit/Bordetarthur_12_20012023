@@ -1,7 +1,11 @@
 import "../Intensity/Intensity.css";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
-
+/**
+ * Creates a ReactElement with a radarchart
+ * @param {*} param0 data fetched from another function
+ * @returns React Element
+ */
 export default function Intensity({data}) {
     return (
         <div className="responsive-wrapper-parent intensity-graph">

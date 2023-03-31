@@ -5,6 +5,12 @@ import meditation from '../../assets/sidebarCategoryIcons/meditation.svg'
 import natation from '../../assets/sidebarCategoryIcons/natation.svg'
 import strength from '../../assets/sidebarCategoryIcons/strength.svg'
 
+
+/**
+ * Creates a button with a predefined image
+ * @param {*} param0 type of button
+ * @returns React Element
+ */
 export default function SideBarCategory({type}) {
     if(type === "bicycle") return (<div className="sidebar-category"> <img src={bicycle} alt="Bicycle" /> </div>)
     if(type === "meditation") return (<div className="sidebar-category"> <img src={meditation} alt="Meditation" /> </div>)

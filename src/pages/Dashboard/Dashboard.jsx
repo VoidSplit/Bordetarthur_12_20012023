@@ -13,7 +13,11 @@ import Intensity from "../../components/Graphs/Intensity/Intensity";
 import AverageSession from "../../components/Graphs/AverageSession/AverageSession";
 import DailySession from "../../components/Graphs/DailySessions/DailySession";
 
-
+/**
+ * generate the dashboard page
+ * @param {*} param0 id of the user and mock boolean
+ * @returns React Element
+ */
 export default function Dashboard({id, mocked}) {
     const [user, setUser] = useState()
     const [userIntensity, setUserIntensity] = useState()

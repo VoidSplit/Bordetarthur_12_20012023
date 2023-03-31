@@ -10,6 +10,11 @@ import {
     ResponsiveContainer,
   } from "recharts";
 
+  /**
+ * Create a react element with a barchart
+   * @param {*} param0 data fetched from another function
+   * @returns React Element
+   */
 export default function DailySession({data}) {
   return (
   <>
@@ -33,7 +38,12 @@ export default function DailySession({data}) {
   )
 };
 
-const CustomTooltip = ({ active, payload, label }) => {
+/**
+ * Creates a custom tooltip element
+ * @param {*} param0 
+ * @returns DOM Element
+ */
+const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
         <div className="daily-tooltip">
@@ -45,7 +55,11 @@ const CustomTooltip = ({ active, payload, label }) => {
   
     return null;
   };
-
+/**
+ * Define the style of the legend
+ * @param {*} value 
+ * @returns DOM Element
+ */
   const CustomLegendText = (value) => {
     return (
       <>

@@ -1,7 +1,10 @@
 import "../PageNotFound/PageNotFound.css";
 
-
-export default function PageNotFound(props) {
+/**
+ * Generate the PageNotFound pag
+ * @returns React Element
+ */
+export default function PageNotFound() {
     return (
         <div className="page">
             <div className="box">

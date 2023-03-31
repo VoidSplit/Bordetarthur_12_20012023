@@ -7,7 +7,11 @@ import {
     YAxis,
     Tooltip,
   } from "recharts";
-
+/**
+ * Creates a custom tooltip element
+ * @param {*} props 
+ * @returns 
+ */
 const CustomTooltip = (props) => {
   let active = props.active
   let payload = props.payload
@@ -22,6 +26,11 @@ const CustomTooltip = (props) => {
     return null;
   };
 
+/**
+ * Create a react element with a linechart
+ * @param {*} param0 data fetched from another function
+ * @returns React Element
+ */
 export default function AverageSession({data}) {
   return (
     <div className="responsive-wrapper-parent average-sessions-graph">

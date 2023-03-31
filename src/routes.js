@@ -7,6 +7,10 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import UserNotFound from "./pages/UserNotFound/UserNotFound";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
+/**
+ * Route Manager, redirect to another page with react router
+ * @returns React Router Element
+ */
 function RoutesManager() {
   return (
     <Router>
@@ -27,6 +31,11 @@ function RoutesManager() {
 
 export default RoutesManager;
 
+/**
+ * Check if user exist and redirect to dashboard if true, otherwise it redirect to UserNotFound page
+ * @param {*} param0 mocked boolean
+ * @returns 
+ */
 const UserExistCheck = ({mocked}) => {
   const [user, setUser] = useState()
 

@@ -1,6 +1,10 @@
 import "../UserNotFound/UserNotFound.css";
 
-export default function UserNotFound(props) {
+/**
+ * Generate the UserNotFound pag
+ * @returns React Element
+ */
+export default function UserNotFound() {
     return (
         <div className="page">
             <div className="box">

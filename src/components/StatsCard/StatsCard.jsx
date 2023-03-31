@@ -5,6 +5,11 @@ import proteinesIcon from '../../assets/statsCardsIcons/protein.svg'
 import glucidesIcon from '../../assets/statsCardsIcons/glucide.svg'
 import lipidesIcon from '../../assets/statsCardsIcons/lipide.svg'
 
+/**
+ * Creates a card with a type and a value
+ * @param {{string, number}} param0 type and value of the card
+ * @returns React Element
+ */
 export default function StatsCard({type, value}) {
     let cards = [
         {
