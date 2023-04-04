@@ -7,6 +7,7 @@ import {
     YAxis,
     Tooltip,
   } from "recharts";
+  import PropTypes from 'prop-types'
 /**
  * Creates a custom tooltip element
  * @param {*} props 
@@ -25,6 +26,11 @@ const CustomTooltip = (props) => {
 
     return null;
   };
+
+  
+CustomTooltip.propTypes = {
+  props: PropTypes.array,
+}
 
 /**
  * Create a react element with a linechart
@@ -84,3 +90,7 @@ export default function AverageSession({data}) {
       </div>
   );
 };
+
+AverageSession.propTypes = {
+  data: PropTypes.array.isRequired,
+}

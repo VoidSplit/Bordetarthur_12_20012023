@@ -1,6 +1,5 @@
 import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from "./mock";
 
-
 /**
  * get keyData of user
  * @param {string} id 
@@ -9,7 +8,6 @@ import { USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE 
  */
 export async function fetchInfos (id, isMocked) {
     if (isMocked) {
-        
         const data = USER_MAIN_DATA.find(user => user.userId === parseInt(id))
         return data.keyData
     }

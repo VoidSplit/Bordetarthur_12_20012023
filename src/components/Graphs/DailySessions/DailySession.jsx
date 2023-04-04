@@ -9,6 +9,8 @@ import {
     Legend,
     ResponsiveContainer,
   } from "recharts";
+  
+  import PropTypes from 'prop-types'
 
   /**
  * Create a react element with a barchart
@@ -38,6 +40,11 @@ export default function DailySession({data}) {
   )
 };
 
+
+DailySession.propTypes = {
+  data: PropTypes.array.isRequired,
+}
+
 /**
  * Creates a custom tooltip element
  * @param {*} param0 
@@ -45,6 +52,7 @@ export default function DailySession({data}) {
  */
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
+      console.log(active, payload)
       return (
         <div className="daily-tooltip">
             <div className="kg">{payload[0].value}kg</div>
@@ -55,6 +63,12 @@ const CustomTooltip = ({ active, payload }) => {
   
     return null;
   };
+
+  
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+}
 /**
  * Define the style of the legend
  * @param {*} value 
@@ -66,4 +80,7 @@ const CustomTooltip = ({ active, payload }) => {
         <span style={{ color: "#74798C" }}>{value}</span>
       </>
     )
+}
+CustomLegendText.propTypes = {
+  value: PropTypes.string,
 }

@@ -5,6 +5,8 @@ import {
     RadialBar,
     ResponsiveContainer,
   } from "recharts";
+  
+import PropTypes from 'prop-types'
 
   /**
    * Create a React Element with a RadialBarChart 
@@ -21,14 +23,14 @@ export default function Score({data}) {
             <div className="responsive-wrapper-children">
                 <ResponsiveContainer width="100%" height="100%" data={data && data}>
                     <RadialBarChart 
-                      cx="50%" 
-                      cy="50%" 
-                      innerRadius="70%" 
-                      outerRadius="80%" 
-                      barSize={10} 
-                      data={data && data}
-                      startAngle={90}
-                      endAngle={-270}
+                        startAngle={90}
+                        endAngle={500}
+                        cx='50%'
+                        cy='50%'
+                        innerRadius={70}
+                        barSize={10}
+                        outerRadius={120}
+                        data={data && data}
                     >
                         <PolarAngleAxis
                           type="number"
@@ -49,3 +51,8 @@ export default function Score({data}) {
         </div>
     );
 };
+
+
+Score.propTypes = {
+    data: PropTypes.array.isRequired,
+}

@@ -1,6 +1,8 @@
 import "../Intensity/Intensity.css";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
+import PropTypes from 'prop-types'
+
 /**
  * Creates a ReactElement with a radarchart
  * @param {*} param0 data fetched from another function
@@ -22,3 +24,8 @@ export default function Intensity({data}) {
         </div>
     );
 };
+
+
+Intensity.propTypes = {
+  data: PropTypes.array.isRequired,
+}

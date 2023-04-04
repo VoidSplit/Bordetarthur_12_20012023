@@ -13,6 +13,7 @@ import Intensity from "../../components/Graphs/Intensity/Intensity";
 import AverageSession from "../../components/Graphs/AverageSession/AverageSession";
 import DailySession from "../../components/Graphs/DailySessions/DailySession";
 
+import PropTypes from 'prop-types'
 /**
  * generate the dashboard page
  * @param {*} param0 id of the user and mock boolean
@@ -108,7 +109,7 @@ export default function Dashboard({id, mocked}) {
                                     
                                 </div>
                                 <div className="graph">
-                                    {user && <Score data={userScore} />}
+                                    {userScore && <Score data={userScore} />}
                                 </div>
                             </div>
                         </div>
@@ -124,3 +125,8 @@ export default function Dashboard({id, mocked}) {
         </div>
     );
 };
+
+Dashboard.propTypes = {
+    id: PropTypes.string.isRequired,
+    mocked: PropTypes.bool.isRequired,
+}
